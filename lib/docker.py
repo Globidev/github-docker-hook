@@ -13,3 +13,11 @@ def build(path, name, dockerfile='Dockerfile'):
         path
     ]
     call(args)
+
+def push(image):
+    args = [
+        'docker',
+        'push',
+        image,
+    ]
+    call(args)
