@@ -2,7 +2,7 @@ from subprocess import call
 
 from os.path import join
 
-def docker_build(path, name, dockerfile='Dockerfile'):
+def build(path, name, dockerfile='Dockerfile'):
     args = [
         'docker',
         'build',
