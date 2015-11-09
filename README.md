@@ -12,7 +12,7 @@ A post push github hook to generate docker images and/or do other cool stuff
  ROUTE = '/some_route'
  PORT = 4242 # Or some other port
 
- def on_push(json_data):
+ def on_push(json_payload, logger):
       # Do something when someone pushes to your repository
  ```
  :information_source: You can find the hook used for this very repository [here](example/my_hook.py)
