@@ -6,6 +6,13 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
+import logging
+
+app.logger.setLevel(logging.INFO)
+formatter = logging.Formatter('[%(asctime)s -- %(levelname)s]\t%(message)s')
+handler = logging.StreamHandler(sys.stdout)
+handler.setFormatter(formatter)
+app.logger.addHandler(handler)
 
 import threading
 import traceback
@@ -32,5 +39,4 @@ if __name__ == '__main__':
     app.run(
         host='0.0.0.0',
         port=hook.PORT,
-        debug=True
     )
