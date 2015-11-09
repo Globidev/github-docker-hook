@@ -5,7 +5,8 @@ RUN chmod +x /usr/local/bin/docker
 
 RUN pip install \
     Flask \
-    gitpython
+    gitpython \
+    docker-py
 
 ADD lib/ /hook/lib
 ADD main.py /hook/
